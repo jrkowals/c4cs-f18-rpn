@@ -9,13 +9,13 @@ def calculate(arg):
         try:
             stack.append(int(token))
         except ValueError:
-            value1 = stack.pop()
             value2 = stack.pop()
+            value1 = stack.pop()
             if token == '+':
                 result = value1 + value2
             elif token == '-':
                 result = value1 - value2
-                
+
             stack.append(result)
     return stack[0]
 
