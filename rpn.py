@@ -11,8 +11,11 @@ def calculate(arg):
         except ValueError:
             value1 = stack.pop()
             value2 = stack.pop()
-            result = value1 + value2
-
+            if token == '+':
+                result = value1 + value2
+            elif token == '-':
+                result = value1 - value2
+                
             stack.append(result)
     return stack[0]
 
